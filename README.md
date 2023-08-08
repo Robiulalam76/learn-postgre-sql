@@ -27,19 +27,17 @@ UNIQUE(user_id, email, username)
 
 ```
 ALTER TABLE users RENAME TO students;
-
 ```
 
 -- ## 5. Delete existing table
 
 ```
 DROP TABLE users;
-
 ```
 
 -- ## 6. insert data on the table
 
-```
+```json
 INSERT INTO
 users (
 user_id,
@@ -59,54 +57,46 @@ VALUES (
 
 ```
 SELECT * FROM users ;
-
 ```
 
 -- ## 8. get single users
 
 ```
 SELECT * FROM users WHERE user_id =3;
-
 ```
 
 -- ## 9. delete single user from users table
 
 ```
 DELETE FROM users WHERE user_id = 3;
-
 ```
 
 -- ## 10. add new column in existing TABLE
 
 ```
 TRUNCATE TABLE users;
-
 ```
 
 -- ## 10. add new column in existing TABLE
 
 ```
 ALTER TABLE users ADD age INT NOT NULL DEFAULT 18 ;
-
 ```
 
 -- ## 11. delete column from TABLE
 
 ```
 ALTER Table users DROP COLUMN age;
-
 ```
 
 -- ## 10. add contrains in the TABLE column
 
 ```
 ALTER Table users ALTER COLUMN email SET NOT NULL;
-
 ```
 
 -- ## 10. delete contrains in the TABLE column
 
 ```
 ALTER Table users ALTER COLUMN email DROP NOT NULL;
-
 ```
