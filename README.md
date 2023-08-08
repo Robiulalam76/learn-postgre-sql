@@ -12,7 +12,8 @@ CREATE DATABASE practicedb;
 
 -- ## 3. create new table
 
-```CREATE TABLE
+```
+CREATE TABLE
 users(
 user_id INT PRIMARY KEY NOT NULL,
 email VARCHAR(25) NOT NULL,
@@ -24,19 +25,22 @@ UNIQUE(user_id, email, username)
 
 -- ## 4. Rename existing table NAME
 
-```ALTER TABLE users RENAME TO students;
+```
+ALTER TABLE users RENAME TO students;
 
 ```
 
 -- ## 5. Delete existing table
 
-```DROP TABLE users;
+```
+DROP TABLE users;
 
 ```
 
 -- ## 6. insert data on the table
 
-```INSERT INTO
+```
+INSERT INTO
 users (
 user_id,
 email,
@@ -53,52 +57,56 @@ VALUES (
 
 -- ## 7. get all users
 
-```SELECT * FROM users ;
+```
+SELECT * FROM users ;
 
 ```
 
 -- ## 8. get single users
 
-```SELECT * FROM users WHERE user_id =3;
+```
+SELECT * FROM users WHERE user_id =3;
 
 ```
 
 -- ## 9. delete single user from users table
 
-```DELETE FROM users WHERE user_id = 3;
+```
+DELETE FROM users WHERE user_id = 3;
 
 ```
 
 -- ## 10. add new column in existing TABLE
 
-```TRUNCATE TABLE users;
+```
+TRUNCATE TABLE users;
 
 ```
 
 -- ## 10. add new column in existing TABLE
 
-```ALTER TABLE users ADD age INT NOT NULL DEFAULT 18 ;
+```
+ALTER TABLE users ADD age INT NOT NULL DEFAULT 18 ;
 
 ```
 
 -- ## 11. delete column from TABLE
 
-```ALTER Table users DROP COLUMN age;
+```
+ALTER Table users DROP COLUMN age;
 
 ```
 
 -- ## 10. add contrains in the TABLE column
 
-```ALTER Table users ALTER COLUMN email SET NOT NULL;
+```
+ALTER Table users ALTER COLUMN email SET NOT NULL;
 
 ```
 
 -- ## 10. delete contrains in the TABLE column
 
-```ALTER Table users ALTER COLUMN email DROP NOT NULL;
-
 ```
-
-```
+ALTER Table users ALTER COLUMN email DROP NOT NULL;
 
 ```
