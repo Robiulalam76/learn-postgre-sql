@@ -65,10 +65,46 @@ ALTER TABLE users ADD age INT NOT NULL DEFAULT 18 ;
 
 ALTER Table users DROP COLUMN age;
 
--- ## 10. add contrains in the TABLE column
+-- ## 10. add constrains in the TABLE column
 
 ALTER Table users ALTER COLUMN email SET NOT NULL;
 
 -- ## 10. delete contrains in the TABLE column
 
 ALTER Table users ALTER COLUMN email DROP NOT NULL;
+
+/*
+ * -- ||---------------Forienkey practice---------------||
+ */
+
+-- create department table
+
+CREATE TABLE
+    Department (
+        deptID SERIAL PRIMARY KEY NOT NULL,
+        deptName VARCHAR(50) NOT NULL
+    );
+
+INSERT INTO Department VALUES (1, 'IT Department');
+
+SELECT * FROM Department;
+
+DROP TABLE Department;
+
+-- create employee table
+
+CREATE Table
+    Employee(
+        empID SERIAL PRIMARY KEY NOT NULL,
+        empName VARCHAR(50) NOT NULL,
+        deparmentID INT NOT NULL,
+        CONSTRAINT fk_constraint_department_id FOREIGN KEY (deparmentID) REFERENCES Department(deptID)
+    );
+
+INSERT INTO Employee VALUES (1, 'Robiul', 1);
+
+SELECT * FROM Employee;
+
+SELECT * FROM Employee WHERE deparmentid = 1;
+
+DROP Table Employee ;
