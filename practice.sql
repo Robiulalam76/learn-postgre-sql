@@ -443,3 +443,41 @@ SELECT * FROM Books ORDER BY price DESC LIMIT 1 ;
 -- get third hights price
 
 SELECT * FROM Books ORDER BY price DESC LIMIT 1 OFFSET 2 ;
+
+-- IN, NOT IN, BETWEEN, LIKE
+
+-- IN
+
+SELECT * FROM Books WHERE book_id IN (5,7,15);
+
+-- NOT IN
+
+SELECT * FROM Books WHERE book_id NOT IN (5,7,15);
+
+-- BETWEEN
+
+SELECT * FROM Books WHERE book_id BETWEEN 15 AND 30;
+
+-- LIKE --A%
+
+SELECT * FROM Books WHERE title LIKE 'A%';
+
+-- LIKE --%s
+
+SELECT * FROM Books WHERE title LIKE '%s';
+
+-- LIKE --%a%
+
+SELECT * FROM Books WHERE title LIKE '%a%';
+
+-- LIKE --_a% || position
+
+SELECT * FROM Books WHERE title LIKE '_a%';
+
+-- LIKE --__a% || position
+
+SELECT * FROM Books WHERE title LIKE '__a%';
+
+-- LIKE --__a__ || position
+
+SELECT * FROM Books WHERE title LIKE '__a__';
