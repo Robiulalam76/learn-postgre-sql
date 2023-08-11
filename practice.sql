@@ -69,7 +69,7 @@ ALTER Table users DROP COLUMN age;
 
 ALTER Table users ALTER COLUMN email SET NOT NULL;
 
--- ## 10. delete contrains in the TABLE column
+-- ## 10. delete constrains in the TABLE column
 
 ALTER Table users ALTER COLUMN email DROP NOT NULL;
 
@@ -85,7 +85,7 @@ CREATE TABLE
         deptName VARCHAR(50) NOT NULL
     );
 
-INSERT INTO Department VALUES (1, 'IT Department');
+INSERT INTO Department VALUES (2, 'Machine');
 
 SELECT * FROM Department;
 
@@ -101,7 +101,7 @@ CREATE Table
         CONSTRAINT fk_constraint_department_id FOREIGN KEY (deparmentID) REFERENCES Department(deptID)
     );
 
-INSERT INTO Employee VALUES (1, 'Robiul', 1);
+INSERT INTO Employee VALUES (2, 'Sakil khan', 2);
 
 SELECT * FROM Employee;
 
@@ -481,3 +481,9 @@ SELECT * FROM Books WHERE title LIKE '__a%';
 -- LIKE --__a__ || position
 
 SELECT * FROM Books WHERE title LIKE '__a__';
+
+-- joining
+
+SELECT *
+From Employee
+    INNER JOIN Department ON Employee.deparmentID = Department.deptID;
