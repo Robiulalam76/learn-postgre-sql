@@ -107,4 +107,47 @@ SELECT * FROM Employee;
 
 SELECT * FROM Employee WHERE deparmentid = 1;
 
+SELECT empid,empname,deparmentid FROM Employee WHERE deparmentid = 1;
+
 DROP Table Employee ;
+
+-----------------------------------------------------------------;;
+
+-- update and deletion
+
+CREATE Table
+    Books(
+        book_id SERIAL PRIMARY KEY NOT NULL,
+        title VARCHAR(50) NOT NULL,
+        author VARCHAR(50) NOT NULL,
+        published_date DATE NOT NULL,
+        description VARCHAR(500)
+    );
+
+INSERT INTO
+    Books (
+        "title",
+        "author",
+        "published_date"
+    )
+VALUES (
+        'Histroy of Prophet Mohammad (sa)',
+        'Robiul Alam',
+        '2018/05/22'
+    );
+
+SELECT * FROM Books;
+
+SELECT * FROM Books WHERE published_date = '2010/05/16';
+
+SELECT title FROM Books;
+
+-- how to delete row
+
+DELETE FROM Books WHERE book_id = 7;
+
+-- how to update column
+
+UPDATE Books Set title = 'Daily Lear Dua' WHERE book_id = 6 ;
+
+UPDATE Books Set published_date = '2010-05-16' WHERE book_id = 2 ;
